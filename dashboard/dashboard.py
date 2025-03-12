@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import numpy as np
-from babel.numbers import format_currency
 
 
 def create_weekday_user(df):
@@ -33,8 +32,8 @@ def create_hourly_user(df):
     return hourly_user_df
 
 
-day_df = pd.read_csv("dashboard/clean_day.csv")
-hour_df = pd.read_csv("dashboard/clean_hour.csv")
+day_df = pd.read_csv("clean_day.csv")
+hour_df = pd.read_csv("clean_hour.csv")
 
 min_date = day_df["dteday"].min()
 max_date = day_df["dteday"].max()
